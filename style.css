@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 50px 600px 600px 50px;
+  grid-template-rows: 50px 500px 300px 70px 50px;
+  place-content: center center;
+  text-align: center;
+}
+div {
+  border: 5px solid #e87740;
+  font-size: 20px;
+  padding: 5px;
+  letter-spacing: 5px;
+}
+div:first-child {
+  grid-column: 1/5;
+  background-color: white;
+  color: #e87740;
+
+  white-space: nowrap;
+}
+
+div:nth-child(2) {
+  grid-column-start: 1;
+  grid-row: 2/3;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  background-color: #e87740;
+  color: white;
+  border-top: none;
+  border-bottom: none;
+}
+
+div:nth-child(3) {
+  grid-row: 3/4;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  background-color: white;
+  color: #e87740;
+  border-top: none;
+}
+div:nth-child(4) {
+  grid-row: 4/5;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  border-bottom: none;
+}
+
+div:nth-child(4) > img {
+  filter: invert(54%) sepia(71%) saturate(1104%) hue-rotate(334deg)
+    brightness(96%) contrast(88%);
+  height: 18px;
+  width: 18px;
+}
+
+div:nth-child(5) {
+  grid-column: 1/5;
+  grid-row: 5/6;
+  background-color: white;
+  color: #e87740;
+  height: fit-content;
+  white-space: nowrap;
+}
+
+div:nth-child(6) {
+  grid-column-start: 4;
+  grid-row: 2/3;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  background-color: #46ab4f;
+  color: white;
+  border-top: none;
+  border-bottom: none;
+}
+
+div:nth-child(7) {
+  grid-column-start: 4;
+  grid-row: 3/5;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  background-color: #46ab4f;
+  color: white;
+  border-bottom: none;
+}
+
+div:nth-child(8) {
+  border: none;
+  padding: 0;
+  grid-column: 2/4;
+  grid-row: 2/5;
+  display: flex;
+  float: left;
+}
+
+.back {
+  display: flex;
+  padding: 0;
+  border: none;
+  text-align: center;
+}
+.back img {
+  height: 100%;
+  width: 50%;
+}
+h1 {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 100px;
+}
